@@ -1,6 +1,6 @@
 #Questão 1
 while True:
-    qtd_numeros = int(input("Digite a quantidade de números que você deseja verificar (digite 'x' para encerrar): "))
+    qtd_numeros = (input("Digite a quantidade de números que você deseja verificar (digite 'x' para encerrar): "))
     
     if qtd_numeros == 'x':
         print("Programa encerrado.")
@@ -45,20 +45,20 @@ print("A soma de todos os números de 1 a 100 é:", soma)
 
 #Questão 4
 contador_impares = 0
-numero = int(input("Digite um número: "))
+numeros_impares = []
 
-if numero % 2 == 0:
-    print("O número", numero, "é par.")
-else:
-    print("O número", numero, "é ímpar.")
-    contador_impares += 1
-
-    for numero_impar in range(numero + 2, numero + 12, 2):
-        print("Próximo número ímpar:", numero_impar)
+while contador_impares < 5:
+    numero = int(input("Digite um número ímpar: "))
+    
+    if numero % 2 != 0:
+        print("O número", numero, "é ímpar.")
+        numeros_impares.append(numero)
         contador_impares += 1
-        
-        if contador_impares == 5:
-            break
+    else:
+        print("O número", numero, "não é ímpar. Tente novamente.")
+
+print("Os 5 números ímpares que você digitou são:", numeros_impares)
+
 
 
 #Questão 5
